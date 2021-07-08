@@ -55,7 +55,7 @@ func child() {
 	must(syscall.Sethostname([]byte("HoraDeK8S")))
 
 	// https://github.com/opencontainers/runc/blob/master/libcontainer/rootfs_linux.go#L942
-	must(syscall.Chroot("/home/vagrant/container/" + os.Args[2]))
+	must(syscall.Chroot("/home/vagrant/containers/" + os.Args[2]))
 	must(os.Chdir("/"))
 
 	// https://github.com/opencontainers/runc/blob/master/libcontainer/rootfs_linux.go#L389
